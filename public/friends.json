@@ -1,0 +1,135 @@
+
+[
+    {
+      "profileImg": "https://i.ibb.co/f8L13BH/jahid.jpg",
+      "Name": "Jahid Hasan",
+      "age": 25,
+      "passion": "Photography",
+      "home": "Chandpur",
+      "thana": "Fulbaria",
+      "zela": "Mymensingh",
+      "myselfDescription": "I love capturing moments and exploring new places. My passion for photography allows me to see the world through a different lens, capturing the beauty in everyday life and sharing it with others. I enjoy experimenting with different techniques and styles to create unique and meaningful images that tell a story and evoke emotions in the viewers."
+    },
+    {
+      "profileImg": "https://i.ibb.co/gMSgDxp/masud.jpg",
+      "Name": "SM Masud Rana",
+      "age": 27,
+      "passion": "Cycling",
+      "home": "Chandpur",
+      "thana": "Fulbaria",
+      "zela": "Mymensingh",
+      "myselfDescription": "Cycling enthusiast with a love for adventure. I enjoy exploring new trails and pushing my limits. Cycling gives me a sense of freedom and keeps me physically fit while connecting with nature. Whether it's a long-distance ride or a short sprint, I find joy in every pedal stroke and the sense of achievement it brings."
+    },
+    {
+      "profileImg": "https://i.ibb.co/YyD9YWL/rajon.jpg",
+      "Name": "RM Rajon",
+      "age": 23,
+      "passion": "Music",
+      "home": "Chandpur",
+      "thana": "Fulbaria",
+      "zela": "Mymensingh",
+      "myselfDescription": "Passionate about music and playing guitar. Music is my escape and my way of expressing emotions. I love composing my own songs and performing for friends and family, bringing joy through melodies. Music has the power to connect people and I cherish every moment spent creating and sharing music with others."
+    },
+    {
+      "profileImg": "https://i.ibb.co/qL6NGKG/raju.jpg",
+      "Name": "Raju Ahmed",
+      "age": 23,
+      "passion": "Web Developer",
+      "home": "Chandpur",
+      "thana": "Fulbaria",
+      "zela": "Mymensingh",
+      "myselfDescription": "Love to cook and try new recipes. Cooking is an art that brings people together. Experimenting with different ingredients and cuisines allows me to create delicious meals and make dining a delightful experience. I enjoy hosting dinner parties and seeing the happiness on my friends' and family's faces when they taste my creations."
+    },
+    {
+      "profileImg": "https://i.ibb.co/xznNDPG/deluar.jpg",
+      "Name": "DS Delwar",
+      "age": 22,
+      "passion": "Cooking",
+      "home": "Polastoli",
+      "thana": "Fulbaria",
+      "zela": "Mymensingh",
+      "myselfDescription": "Love to cook and try new recipes. Cooking is an art that brings people together. Experimenting with different ingredients and cuisines allows me to create delicious meals and make dining a delightful experience. I enjoy hosting dinner parties and seeing the happiness on my friends' and family's faces when they taste my creations."
+    },
+    {
+      "profileImg": "https://i.ibb.co/W3VM4LF/rakib.jpg",
+      "Name": "Ra Rakib",
+      "age": 24,
+      "passion": "Reading",
+      "home": "Maderchala",
+      "thana": "Fulbaria",
+      "zela": "Mymensingh",
+      "myselfDescription": "Avid reader and literature lover. Books are my constant companions, providing me with knowledge and a gateway to different worlds. I enjoy getting lost in stories and learning from various perspectives. Reading enriches my mind and soul, and I love discussing books and sharing recommendations with fellow book enthusiasts."
+    },
+    {
+      "profileImg": "https://i.ibb.co/YPXmtFc/rana2.jpg",
+      "Name": "Shohel Rana",
+      "age": 28,
+      "passion": "Traveling",
+      "home": "Chandpur",
+      "thana": "Fulbaria",
+      "zela": "Mymensingh",
+      "myselfDescription": "Enjoy traveling and exploring new cultures. Traveling broadens my horizons and offers unique experiences. I love meeting new people, trying local foods, and immersing myself in different traditions and landscapes. Every trip is an adventure that teaches me something new and leaves me with unforgettable memories and stories to tell."
+    },
+    {
+      "profileImg": "https://i.ibb.co/VpcHNrh/rayhan.jpg",
+      "Name": "Abu Rayhan",
+      "age": 22,
+      "passion": "Gaming",
+      "home": "Gobindopur",
+      "thana": "Fulbaria",
+      "zela": "Mymensingh",
+      "myselfDescription": "Gamer and tech enthusiast. Gaming is not just a hobby; it's a passion that connects me with friends and challenges my mind. I enjoy exploring virtual worlds and staying updated with the latest tech trends. Gaming has taught me strategic thinking, teamwork, and perseverance, and it's a great way to unwind and have fun."
+    },
+    {
+      "profileImg": "https://i.ibb.co/SBLDyxq/sabit.jpg",
+      "Name": "Zayed Bin Sabit",
+      "age": 29,
+      "passion": "Swimming",
+      "home": "Chandpur",
+      "thana": "Fulbaria",
+      "zela": "Mymensingh",
+      "myselfDescription": "Love swimming and water sports. Being in the water is my happy place, where I feel free and energized. Swimming keeps me fit and is a perfect way to relax and enjoy nature. I often participate in swimming competitions and water activities, always striving to improve my skills and achieve new goals."
+    },
+    {
+      "profileImg": "https://i.ibb.co/pdXp61q/sazzad.jpg",
+      "Name": "Sazzad Al Numan",
+      "age": 30,
+      "passion": "Hiking",
+      "home": "Chandpur",
+      "thana": "Fulbaria",
+      "zela": "Mymensingh",
+      "myselfDescription": "Outdoor enthusiast with a passion for hiking. I find peace and inspiration in nature. Hiking allows me to explore beautiful landscapes, stay active, and disconnect from the hustle and bustle of daily life. Each hike is a new adventure, offering breathtaking views and the thrill of reaching the summit."
+    },
+    {
+      "profileImg": "https://i.ibb.co/Nmz6hTC/hasan.jpg",
+      "Name": "MH Hasan",
+      "age": 23,
+      "passion": "Friendship",
+      "home": "Fulbaia",
+      "thana": "Muktagacha",
+      "zela": "Mymensingh",
+      "myselfDescription": "We are a group of friends who enjoy spending time together. Our bond is strong, built on shared experiences, trust, and support. We cherish our moments together and make the most out of our friendship. Whether it's hanging out, traveling, or simply chatting, we always have a great time and create lasting memories."
+    },
+    {
+      "profileImg": "https://i.ibb.co/G0F00Lt/asikh.jpg",
+      "Name": "Asikh Khan",
+      "age": 31,
+      "passion": "Writing",
+      "home": "Chandpur",
+      "thana": "Fulbaria",
+      "zela": "Mymensingh",
+      "myselfDescription": "Writer and poet. Writing allows me to express my thoughts and emotions creatively. I enjoy crafting stories, poems, and articles that resonate with readers and provoke thought and inspiration. Writing is my way of exploring the world and sharing my perspective, aiming to make a positive impact through my words."
+    },
+    {
+      "profileImg": "https://i.ibb.co/kDcwMJP/atik.jpg",
+      "Name": "Atik Hasan Bablu",
+      "age": 32,
+      "passion": "Dancing",
+      "home": "Bakta",
+      "thana": "Fulbaria",
+      "zela": "Mymensingh",
+      "myselfDescription": "Dance is my passion and my escape. I love expressing myself through movement, feeling the rhythm, and letting go of all worries. Dancing brings joy to my life and allows me to connect with others. Whether it's performing on stage or just dancing at home, I always feel alive and energized."
+    }
+     
+  ]
+  

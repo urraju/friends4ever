@@ -1,10 +1,11 @@
-import addingStory from "@/assets/all-img/addingStory.png";
+import friends from "@/assets/all-img/man.png";
 import Image from "next/image";
 const Banner = () => {
   return (
-    <div className="bg-background h-[800px] overflow-hidden z-30 relative bg-cover bg-no-repeat bg-bottom ">
-      <div className="absolute h-full w-full -z-30  bg-black/50"></div>
-      <div className="max-w-screen-2xl h-[800px] mx-auto flex flex-col md:flex-row items-center justify-between  md:px-0 px-1">
+    <div className="bg-background h-[900px] overflow-hidden z-30 relative bg-cover bg-no-repeat bg-bottom ">
+      <div className="absolute h-full w-full -z-30  bg-black/40"></div>
+      <div className="absolute h-full w-full opacity-80 -z-30 bg-gradient-to-b to-black from-[#7532d422]"></div>
+      <div className="max-w-screen-2xl h-[800px] mx-auto flex flex-col md:flex-row items-center justify-center  md:px-0 px-1">
         <div className="flex-1 space-y-3 relative mt-24">
           <h1 className="md:text-5xl text-2xl font-semibold text-white  leading-snug">
             {" "}
@@ -28,13 +29,11 @@ const Banner = () => {
             </button>
           </div>
 
-          <div className="  bg-gradient-to-tr opacity-40 from-[#FEA833] to-[#7532D4] w-[600px] h-[600px] absolute rounded-full -top-40 -left-20 blur-3xl -z-30"></div>
+          <div className="  bg-gradient-to-tr opacity-10 from-[#FEA833] to-[#7532D4] w-[600px] h-[600px] absolute rounded-full -top-40 -left-20 blur-3xl -z-30"></div>
         </div>
-
-        <div className="   relative">
-          <Image className="z-50 " src={addingStory} alt="addingStory" />
-
-          <div className=" animation bg-gradient-to-tr opacity-80 from-[#FEA833]   w-[600px] h-[600px] absolute rounded-full top-0 blur-3xl -z-30"></div>
+ 
+        <div>
+          <Image src={friends} alt="friends"/>
         </div>
       </div>
     </div>

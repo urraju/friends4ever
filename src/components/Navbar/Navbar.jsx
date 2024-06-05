@@ -37,7 +37,7 @@ const Navbar = () => {
   ];
   return (
     <div className="fixed z-50 top-0 left-0 right-0">
-      <div className="max-w-screen-2xl mx-auto top-0  py-2 md:backdrop-blur md:bg-white/5 rounded-lg bg-white">
+      <div className="max-w-screen-2xl mx-auto top-0  py-2 md:backdrop-blur md:bg-black/20 rounded-lg bg-white">
         <nav className="md:flex md:justify-between md:items-center ">
           <div className="flex items-center gap-3 mx-auto md:mx-0">
             <Image className="w-20" src={logo} alt="logo" />
