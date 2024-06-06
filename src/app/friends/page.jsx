@@ -13,7 +13,7 @@ const page = async () => {
         {allFriends.map((item) => (
           <div class="card relative">
             <Link class="card1" href="#">
-              <p className="absolute bottom-10 text-sm backdrop-blur px-3 py-1    text-white rounded-lg bg-[#FEA833] bg-opacity-20 right-8">
+              <p className="absolute bottom-10 border-l-2 text-sm backdrop-blur px-3 py-1 text-white rounded border-[#FEA833] bg-[#FEA833] bg-opacity-30 right-8">
                 {item.Name}
               </p>
               <img

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { IoMenuSharp } from "react-icons/io5";
 import { GiSplitCross } from "react-icons/gi";
 import { useState } from "react";
-
+import './navbar.modules.css'
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const navMenu = [
@@ -41,8 +41,8 @@ const Navbar = () => {
         <nav className="md:flex md:justify-between md:items-center ">
           <div className="flex items-center gap-3 mx-auto md:mx-0">
             <Image className="w-20" src={logo} alt="logo" />
-            <h1 className="text-3xl md:text-white  font-bold">
-              Friends <span className="text-[#FEA833]">4</span> Ever
+            <h1 className="text-3xl md:text-white font-cinzel  font-bold"> We Are
+               <span className="text-[#FEA833]"> Friends</span>
             </h1>
           </div>
           {/* menu icon */}
@@ -62,7 +62,7 @@ const Navbar = () => {
           >
             {navMenu.map((item) => (
               <ul key={item.Title}>
-                <Link className="md:text-white text-lg " href={item.Route}>
+                <Link className=" md:text-white text-[16px] font-medium font-cinzel " href={item.Route}>
                   {item.Title}
                 </Link>
               </ul>
