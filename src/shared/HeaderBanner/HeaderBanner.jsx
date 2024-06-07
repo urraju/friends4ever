@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { RiArrowLeftDoubleFill } from "react-icons/ri";
 
-const HeaderBanner = ({ img, heading }) => {
+const HeaderBanner = ({ heading }) => {
   return (
     <div className="max-w-screen-2xl mx-auto">
       <div
@@ -18,7 +18,7 @@ const HeaderBanner = ({ img, heading }) => {
         {/* main content */}
         <div className="z-30 flex justify-center items-center h-full ">
           <div className="space-y-3">
-            <h1 className="text-[#FEA833]  text-4xl font-cinzel font-semibold">
+            <h1 className="text-[#FEA833] text-4xl font-cinzel font-semibold">
               {heading}
             </h1>
             <p className="text-white font-light">
@@ -27,9 +27,9 @@ const HeaderBanner = ({ img, heading }) => {
               dolores pariatur?
             </p>
             {/* button home  */}
-            <div className="absolute left-5 top-0">
+            <div className="absolute top-0">
               <Link href="/">
-                <button className="flex font-cinzel rounded text-sm text-white font-medium items-center justify-center backdrop-blur bg-opacity-30 hover:tracking-tight bg-[#FEA833]   px-3 py-1 gap-2">
+                <button className="flex font-cinzel rounded text-sm text-white font-medium items-center justify-center backdrop-blur bg-opacity-30 hover:tracking-wide bg-[#FEA833] px-3 py-1 gap-2 transition-all ease-in duration-300">
                   <RiArrowLeftDoubleFill className="text-lg " />
                   Go Home
                 </button>
