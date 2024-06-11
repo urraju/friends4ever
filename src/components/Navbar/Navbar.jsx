@@ -80,7 +80,7 @@ const Navbar = () => {
             ))}
 
             <div className="md:ml-20">
-               <ShareButton>Login</ShareButton>
+               <ShareButton><Link href='/authentication'>Login</Link></ShareButton>
             </div>
           </div>
         </nav>
