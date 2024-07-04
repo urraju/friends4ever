@@ -24,7 +24,7 @@ const Banner = () => {
           </p>
 
           <div className="flex items-center gap-6 ">
-            <ShareButton><Link href='/addstory'>Add Story +</Link></ShareButton>
+            <ShareButton><Link href='/addStory'>Add Story +</Link></ShareButton>
             <Button2>See Story</Button2>
           </div>
 

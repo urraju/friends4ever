@@ -1,12 +1,13 @@
 import Link from "next/link";
 import "./card.modules.css";
 import HeaderContent from "@/shared/HeaderContent/HeaderContent";
+import useAxios from "@/hooks/useAxios";
 
 const page = async () => {
-  const res = await fetch("http://localhost:8000/friends", {
-    cache: "no-store",
-  });
-  const allFriends = await res.json();
+  const axiosPublic = useAxios();
+
+  const response = await axiosPublic.get("/friends");
+  const allFriends = response.data;
 
   return (
     <div className="max-w-screen-2xl mx-auto mt-[130px]">

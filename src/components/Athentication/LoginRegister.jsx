@@ -13,7 +13,7 @@ const NEXT_PUBLIC_HOSTINGKEY = process.env.NEXT_PUBLIC_HOSTINGKEY;
 const images_hosting_api = `https://api.imgbb.com/1/upload?key=${NEXT_PUBLIC_HOSTINGKEY}`;
 //  images hostion
 const LoginRegister = () => {
-  const { signIn,createUser } = useAuth();
+  const { signIn, createUser,userUpdateProfile } = useAuth();
   const [open, setOpen] = useState(false);
   const axiosPublic = useAxios();
   const handleLogin = (e) => {
@@ -21,70 +21,68 @@ const LoginRegister = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    signIn(email, password).then((res) => {
-      try {
-        if (res.user.result) {
-          return toast.success("Login successfull");
+
+    signIn(email, password)
+      .then((res) => {
+        if (res.user) {
+          toast.success("Login successful");
         }
-      } catch (error) {
-        return toast.error(error);
-      }
-    });
+      })
+      .catch((error) => {
+        toast.error(error.message); // Ensure to use the error message
+      });
   };
+
   // resigtation function
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (data) => {
     if (data.password.length < 6) {
-      setSuccess("password should be 6 carecter or longer");
+      toast.error("Password should be 6 characters or longer");
       return;
     } else if (!/[A-Z]/.test(data.password)) {
-      setSuccess(
-        "your password should have at least one upuer case caracters."
+      toast.error(
+        "Your password should have at least one uppercase character."
       );
       return;
     }
 
-    const fromImages = { image: data.image[0] };
-    const res = await axiosPublic.post(images_hosting_api, fromImages, {
-      headers: {
-        "content-type": "multipart/form-data",
-      },
-    });
-    if (res.data.success) {
-      setImgLoader(false);
+    try {
+      const formData = new FormData();
+      formData.append("image", data.image[0]);
 
-      const name = data.name;
-      const email = data.email;
-      const password = data.password;
-      const profileImg = res?.data?.data?.display_url;
-      const role = "users";
+      const res = await axiosPublic.post(images_hosting_api, formData);
 
-      createUser(email, password)
-        .then((result) => {
-          updateProfile(result.user, {
-            displayName: name,
-            photoURL: photoURL,
-          }).then(() => {
-            const userInfo = {
-              name,
-              email,
-              profileImg,
-              role,
-            };
-            axiosPublic.post("/users", userInfo).then((res) => {
-              if (res.data?.result) {
-                reset();
-                // navigate(location?.state ? location?.state : "/");
-                toast.success("Resigtation successfull");
-              }
-            });
-          });
-        })
-        .catch((error) => {
-          toast.error(error?.messsage);
+      if (res.data.success) {
+        const name = data.name;
+        const email = data.email;
+        const password = data.password;
+        const profileImg = res.data.display_url;
+
+        const userCredential = await createUser(email, password);
+        await userUpdateProfile(userCredential.user,{
+          displayName: name,
+          photoURL: profileImg,
         });
+
+        const userInfo = {
+          name: name,
+          email: email,
+          password: password,
+          profileImg: profileImg,
+          role: "user",
+        };
+
+        const userRes = await axiosPublic.post("/users", userInfo);
+        if (userRes.data.result) {
+          reset();
+          toast.success("Registration successful");
+        }
+      }
+    } catch (error) {
+      toast.error(error.message); // Use error.message to display the error message
     }
   };
+
   return (
     <div className="max-w-screen-2xl mx-auto flex justify-center items-center h-[700px]">
       <div className="main">
