@@ -10,7 +10,7 @@ const Category = ({ data }) => {
         <div className="content flex justify-center items-center">
           <button className=" flex items-center gap-1 text-[12px] font-light font-cinzel hover:tracking-wider transition-all duration-500 border px-4 py-1 rounded border-gray-400">
             {" "}
-            <Link href="/">See Story</Link>
+            <Link href={`/seestory/${data.category}`}>See Story</Link>
             <IoIosArrowRoundForward className="text-lg" />
           </button>
         </div>

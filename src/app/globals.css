@@ -27,3 +27,70 @@
     margin-left: 0; /* Reset margin-left to 0 at 100% */
   }
 }
+
+.input-file{
+  font-size: 16px;
+  margin-top: 3px;
+  background: transparent;
+  
+}
+
+::-webkit-file-upload-button{
+  color: white;
+  background: #7532D4;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 5px 50px;
+}
+.dark ::-webkit-file-upload-button{
+  color: #7532D4;
+  background: #0b2629;
+}
+::-webkit-file-upload-button:hover{
+  background: #091e20;
+}
+::-webkit-file-upload-button:hover{
+  background: #091e20;
+}
+.dark .input-file{
+  background: white;
+}
+
+/* category css  */
+
+
+
+.box {
+  width: 100%;
+  height: 288px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.box img {
+  transition: transform 0.5s ease;
+}
+
+.box:hover img {
+  transform: scale(1.2);
+}
+
+.content {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  transition: all 1s;
+  transform-origin: center;
+}
+
+.box:hover .content {
+  bottom: 0;
+}
