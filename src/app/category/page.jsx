@@ -7,7 +7,7 @@ const CategoryPage = async () => {
   const axiosPublic = useAxios();
   const response = await axiosPublic.get("/category");
   const allCategory = response.data;
-  console.log(allCategory);
+  
   return (
     <div className="max-w-screen-2xl mx-auto mt-[130px]">
       <HeaderContent
@@ -20,7 +20,7 @@ const CategoryPage = async () => {
             <div className=" rounded-md shadow">
               <div className="box">
                 <img
-                  className="h-72 w-[500px] object-cover rounded-md"
+                  className="h-72 w-[500px] object-cover rounded-t-md"
                   src={data.img}
                   alt=""
                 />

@@ -3,27 +3,39 @@ import useAuth from "@/hooks/useAuth";
 import useAxios from "@/hooks/useAxios";
 import ShareButton from "@/shared/Button/ShareButton";
 import HeaderBanner from "@/shared/HeaderBanner/HeaderBanner";
-import { useState } from "react";
+import { LuCheck } from "react-icons/lu";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 const NEXT_PUBLIC_HOSTINGKEY = process.env.NEXT_PUBLIC_HOSTINGKEY;
 const imagebb_hosting_api = `https://api.imgbb.com/1/upload?key=${NEXT_PUBLIC_HOSTINGKEY}`;
 const AddStory = () => {
-  const [submitLoader, setSubmitLoader] = useState(false)
-  // const { user } = useAuth();
+  const [submitLoader, setSubmitLoader] = useState(false);
+  const [storyName, setStoryName] = useState("");
+  const [storyDes, setStoryDes] = useState("");
   const axiosPublic = useAxios();
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset, watch } = useForm();
+  // Watch for changes in the input value
+  const storyNameValue = watch("storyName");
+  const storyDesValue = watch("storyDes");
+  useEffect(() => {
+    setStoryName(storyNameValue);
+    setStoryDes(storyDesValue);
+  }, [storyNameValue, storyDesValue]);
+
   const onSubmit = async (data) => {
-  setSubmitLoader(true)
-  const imageFile = { image: data.image[0] };
-  const res = await axiosPublic.post(imagebb_hosting_api, imageFile, {
+    setStoryName(data.storyName);
+    setStoryImg(data.image);
+    setSubmitLoader(true);
+    const imageFile = { image: data.image[0] };
+    const res = await axiosPublic.post(imagebb_hosting_api, imageFile, {
       headers: {
         "content-type": "multipart/form-data",
       },
     });
- 
+
     if (res.data.success) {
-      setSubmitLoader(false)
+      setSubmitLoader(false);
       const storyInfo = {
         story_name: data.storyName,
         category: data.storyType,
@@ -51,13 +63,18 @@ const AddStory = () => {
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* input number 1  */}
             <div className="flex items-center gap-5 p-5">
-              <label className="flex flex-1 flex-col text-white text-sm font-light">
+              <label className="relative flex flex-1 flex-col text-white text-sm font-light">
                 Story Name
                 <input
-                  className="w-full bg-transparent py-1  border-b outline-none hover:border-[#08b5ff] transition-all duration-500 "
+                  className="w-full bg-transparent py-1  border-b outline-none focus:border-[#08b5ff] transition-all duration-500 "
                   type="text"
                   {...register("storyName", { required: true })}
                 />
+                {storyName && (
+                  <span className="absolute  bottom-2 right-2 w-[18px] h-[18px] rounded-full bg-[#08b5ff] text-white flex items-center justify-center">
+                    <LuCheck />
+                  </span>
+                )}
               </label>
               <label className="flex flex-1 flex-col text-white text-sm font-light">
                 Story Type
@@ -98,19 +115,28 @@ const AddStory = () => {
             {/* input number 3  */}
             <div className="flex items-center gap-5 p-5">
               {/* label one  */}
-              <label className="flex flex-1 flex-col text-white text-sm font-light">
+              <label className="relative flex flex-1 flex-col text-white text-sm font-light">
                 Story Description
                 <textarea
                   {...register("storyDes", { required: true })}
-                  className="w-full bg-transparent py-1  border-b outline-none hover:border-[#08b5ff] transition-all duration-500 "
+                  className="w-full bg-transparent py-1  border-b outline-none focus:border-[#08b5ff] transition-all duration-500 "
                 ></textarea>
-                
+                {storyDes && (
+                  <span className="absolute  bottom-2 right-2 w-[18px] h-[18px] rounded-full bg-[#08b5ff] text-white flex items-center justify-center">
+                    <LuCheck />
+                  </span>
+                )}
               </label>
-               
             </div>
 
-            <div className={`flex justify-center items-center gap-5 p-5 ${submitLoader  ? 'animate-pulse' : "animate-none"} `}>
-                <ShareButton isLoading >{submitLoader ? `Waiting...` : "Submit Story" } </ShareButton>
+            <div
+              className={`flex justify-center items-center gap-5 p-5 ${
+                submitLoader ? "animate-pulse" : "animate-none"
+              } `}
+            >
+              <ShareButton isLoading>
+                {submitLoader ? `Waiting...` : "Submit Story"}{" "}
+              </ShareButton>
             </div>
           </form>
         </div>
