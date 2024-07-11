@@ -6,11 +6,15 @@
  
 /* src/styles/Banner.css */
 .background {
-  background-image: url('../assets/all-img/logo.png');
+  background-image: url('../assets/all-img/others/logo.png');
   background-size: cover;
   height: 100vh;
   width: 600px;
   background-position: center; /* Optional for centering */
+}
+
+.active {
+  color: yellow;
 }
 
 .animation {
@@ -83,7 +87,7 @@
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
-  border-radius: 6px;
+  border-radius: 5px;
   border: 1px solid white;
   width: 100%;
   color: white;

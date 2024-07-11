@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import AuthContext from "@/components/Athentication/Authentication";
 import { Toaster } from "react-hot-toast";
+import Footer from "@/components/Footer/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
         <div>
           <Toaster/>
           <AuthContext>{children}</AuthContext>
+          <Footer/>
         </div>
       </body>
     </html>

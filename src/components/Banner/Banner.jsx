@@ -1,4 +1,4 @@
-import friends from "@/assets/all-img/man.png";
+import friends from "@/assets/all-img/others/man.png";
 import Button2 from "@/shared/Button/Button2";
 import ShareButton from "@/shared/Button/ShareButton";
 import Image from "next/image";
