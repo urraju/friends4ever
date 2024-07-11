@@ -20,11 +20,11 @@ const DetailsPage = async ({ params }) => {
   return (
     <div className=" px-2">
       {/* heading img content components  */}
-      <div className="my-5">
+      <div className="my-2">
         <HeaderBanner heading={"Every Firends Details Page"} />
       </div>
       {/* main div content */}
-      <div className="max-w-screen-2xl flex-col md:flex-row relative mx-auto flex items-center my-5">
+      <div className="max-w-screen-2xl flex-col md:flex-row relative mx-auto flex items-center">
         <div className="flex-1">
           <img
             className="hover:animate-pulse transition-all duration-300 w-[500px] h-[500px] object-cover hover:-z-50 rounded-lg"

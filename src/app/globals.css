@@ -1,24 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
- 
-/* src/styles/Banner.css */
+/* style for banner component  */
+
 .background {
-  background-image: url('../assets/all-img/others/logo.png');
+  background-image: url("../assets/all-img/others/logo.png");
   background-size: cover;
   height: 100vh;
   width: 600px;
-  background-position: center; /* Optional for centering */
-}
-
-.active {
-  color: yellow;
+  background-position: center;
 }
 
 .animation {
-  animation: animations 4s infinite; /* Specify duration and infinite looping */
+  animation: animations 4s infinite;
 }
 
 @keyframes animations {
@@ -27,42 +23,41 @@
     margin-left: 40px;
   }
   100% {
-    margin-top: 0; /* Reset margin-top to 0 at 100% */
-    margin-left: 0; /* Reset margin-left to 0 at 100% */
+    margin-top: 0;
+    margin-left: 0;
   }
 }
 
-.input-file{
+/* style for image input field add story component */
+
+.input-file {
   font-size: 16px;
   margin-top: 3px;
   background: transparent;
-  
 }
 
-::-webkit-file-upload-button{
+::-webkit-file-upload-button {
   color: white;
-  background: #7532D4;
+  background: #7532d4;
   padding: 10px;
   border: none;
   border-radius: 5px 5px 50px;
 }
-.dark ::-webkit-file-upload-button{
-  color: #7532D4;
+.dark ::-webkit-file-upload-button {
+  color: #7532d4;
   background: #0b2629;
 }
-::-webkit-file-upload-button:hover{
+::-webkit-file-upload-button:hover {
   background: #091e20;
 }
-::-webkit-file-upload-button:hover{
+::-webkit-file-upload-button:hover {
   background: #091e20;
 }
-.dark .input-file{
+.dark .input-file {
   background: white;
 }
 
-/* category css  */
-
-
+/* style for category component css  */
 
 .box {
   width: 100%;
@@ -71,11 +66,25 @@
   overflow: hidden;
   border-radius: 6px;
 }
+.box:hover img {
+  transform: scale(1.2);
+}
 .box img {
   transition: transform 0.5s ease;
 }
 
-.box:hover img {
+/* style for suggest component  */
+.box-2 {
+  width: 100%;
+
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.box-2 img {
+  transition: transform 0.5s ease;
+}
+.box-2:hover img {
   transform: scale(1.2);
 }
 
@@ -98,6 +107,30 @@
 
 .box:hover .content {
   bottom: 0;
-   
 }
 
+/* css for suggest component */
+
+.button-hover-love:hover {
+  background-color: #ff6f61;
+}
+
+.button-hover-travel:hover {
+  background-color: #4a90e2;
+}
+
+.button-hover-wedding:hover {
+  background-color: #ff69b4;
+}
+
+.button-hover-friendship:hover {
+  background-color: #ffd700;
+}
+
+.button-hover-life:hover {
+  background-color: #32cd32;
+}
+
+.button-hover-sad:hover {
+  background-color: #696969;
+}
