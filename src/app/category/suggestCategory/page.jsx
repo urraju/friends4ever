@@ -1,35 +1,49 @@
+"use client";
+import { useState, useEffect } from "react";
 import useAxios from "@/hooks/useAxios";
+import CategoryTextColor from "@/shared/CategoryTextColor/CategoryTextColor";
 import Link from "next/link";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
-const SuggestCategory = async () => {
+const SuggestCategory = () => {
   const axiosPublic = useAxios();
-  const response = await axiosPublic.get("/stories");
-  const data = await response.data;
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const categoryColors = {
-    love: "#FF6F61",
-    travel: "#4A90E2",
-    wedding: "#FF69B4",
-    friendship: "#FFD700",
-    life: "#32CD32",
-    sad: "#696969",
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axiosPublic.get("/stories");
+        setData(response.data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const getCategoryColor = (category) => {
-    return categoryColors[category] || "#000000";
-  };
+    fetchData();
+  }, []);
 
   const getHoverClass = (category) => {
     return `button-hover-${category}`;
   };
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
 
   return (
     <section>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {data.map((item) => (
           <div key={item._id}>
-            {/* main card  */}
+            {/* main card */}
             <div className="rounded-md shadow hover:drop-shadow-md transition-all duration-300 p-1 space-y-3">
               <div className="box-2">
                 <img
@@ -39,16 +53,13 @@ const SuggestCategory = async () => {
                 />
               </div>
               <div className="px-1">
-                <div className="flex justify-between items-center">
-                  <p
-                    className="capitalize"
-                    style={{ color: getCategoryColor(item.category) }}
-                  >
-                    {item.category}
+                <div className="flex justify-between items-center w-full">
+                  <p>
+                    <CategoryTextColor text={item.category} textSize={"16px"} />
                   </p>
                   <Link href={`/category/categoryStory/${item._id}`}>
                     <button
-                      className={`flex items-center gap-1 text-[12px] font-medium font-cinzel  hover:text-white transition-all text-black duration-500 px-2 py-1 ${getHoverClass(
+                      className={`flex items-center gap-1 text-[12px] font-medium font-cinzel hover:text-white transition-all text-black duration-500 px-2 py-1 ${getHoverClass(
                         item.category
                       )}`}
                     >

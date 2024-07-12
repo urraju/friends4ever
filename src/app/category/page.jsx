@@ -1,8 +1,9 @@
 import useAxios from "@/hooks/useAxios";
+import CategoryTextColor from "@/shared/CategoryTextColor/CategoryTextColor";
 import HeaderContent from "@/shared/HeaderContent/HeaderContent";
 import Link from "next/link";
 import { IoIosArrowRoundForward } from "react-icons/io";
- 
+
 const CategoryPage = async () => {
   const axiosPublic = useAxios();
   const response = await axiosPublic.get("/category");
@@ -17,10 +18,10 @@ const CategoryPage = async () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {allCategory?.map((data) => (
           <div key={data._id}>
-            <div className=" rounded-md shadow">
+            <div className="rounded-2xl shadow p-2">
               <div className="box">
                 <img
-                  className="h-72 w-[500px] object-cover rounded-t-md"
+                  className="h-72 w-[500px] object-cover "
                   src={data.img}
                   alt=""
                 />
@@ -32,8 +33,8 @@ const CategoryPage = async () => {
                   </button>
                 </div>
               </div>
-              <p className="mt-2 py-2 border-l-2 px-2 font-medium rounded-b-md border-[#7336d1]">
-                {data.name}
+              <p className="my-2 font-medium rounded-b-md ">
+                <CategoryTextColor text={data.category} textSize={'20px'}/>
               </p>
             </div>
           </div>
