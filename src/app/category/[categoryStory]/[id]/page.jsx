@@ -48,7 +48,7 @@ const StoryDetails = ({ params }) => {
       <section className="mt-2">
         <HeaderBanner heading="Every story details page" />
         <div className="max-w-screen-2xl mx-auto mt-2 grid grid-cols-12 gap-5">
-          <div className="p-2 rounded-md shadow-md col-span-7">
+          <div className="p-2  col-span-7 border-r">
             <h1 className="text-xl font-bold mb-2">{data.story_name}</h1>
             <img
               src={data.story_image}
@@ -117,7 +117,7 @@ const StoryDetails = ({ params }) => {
             </div>
           </div>
 
-          <div className="col-span-5 rounded-md">
+          <div className="col-span-5 ">
             <p className="text-xl font-bold mb-2">All Category</p>
             <SuggestCategory />
           </div>
