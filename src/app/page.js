@@ -8,8 +8,8 @@ export default function Home() {
       <div>
         <Navbar />
         <Banner />
-        <Friends/>
         <Category/>
+        <Friends/>
       </div>
     </>
   );
